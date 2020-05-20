@@ -14,7 +14,7 @@ const useStyles=makeStyles((theme:Theme)=>
             borderBottom:`2px solid ${theme.palette.primary.main}`
         },
         about:{
-            justifyContent:"center"
+            justifyContent:"center",
         },
         ul:{
             listStyle:"none"
@@ -23,11 +23,9 @@ const useStyles=makeStyles((theme:Theme)=>
             padding:theme.spacing(1,0,1,0)
         },
         profile_img:{
-            width:"auto",
-            height:"30%"
-
-
-
+            width:"100%",
+            height:"100%",
+            objectFit:"scale-down",
 
         }
     })
