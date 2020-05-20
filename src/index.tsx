@@ -5,10 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import MyStyleComponent from "./MyStyledComponent";
 import Appbars from "./Appbar";
+import Skill from "./skills";
 ReactDOM.render(
   <React.StrictMode>
       <Appbars />
     <MyStyleComponent />
+    <Skill />
   </React.StrictMode>,
   document.getElementById('root')
 );

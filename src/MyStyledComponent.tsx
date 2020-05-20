@@ -6,7 +6,9 @@ import {Grid} from "@material-ui/core";
 const useStyles=makeStyles((theme:Theme)=>
     createStyles({
         root:{
-            padding:theme.spacing(2)
+            padding:theme.spacing(2),
+            fontSize:20,
+            fontFamily:"sans-serif",
         },
         title:{
             borderBottom:`2px solid ${theme.palette.primary.main}`
@@ -19,6 +21,14 @@ const useStyles=makeStyles((theme:Theme)=>
         },
         profile_li:{
             padding:theme.spacing(1,0,1,0)
+        },
+        profile_img:{
+            width:"auto",
+            height:"30%"
+
+
+
+
         }
     })
 );
@@ -38,15 +48,15 @@ function MyStyleComponent({title}:Props){
             </h2>
             <Grid container className={classes.about}>
                 <Grid container item xs={3}>
-            <img src={Icon} width="400" height="400"/>
+            <img src={Icon} className={classes.profile_img}/>
                 </Grid>
                 <Grid container item xs={1}></Grid>
                 <Grid container item xs={3}>
                     <ul className={classes.ul}>
-                        <li className={classes.profile_li}>Name Takuro Omori</li>
-                        <li className={classes.profile_li}>Age 21</li>
-                        <li className={classes.profile_li}>University University of Tokyo Department of Electrical and Electronic Engineering</li>
-                        <li className={classes.profile_li}>hobby programming,travel with train</li>
+                        <li className={classes.profile_li}>Takuro Omori</li>
+                        <li className={classes.profile_li}>1998/12/21</li>
+                        <li className={classes.profile_li}>University of Tokyo Department of Electrical and Electronic Engineering</li>
+                        <li className={classes.profile_li}>Like programming,travel,music game</li>
                     </ul>
                 </Grid>
             </Grid>
