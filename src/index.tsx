@@ -6,11 +6,13 @@ import * as serviceWorker from './serviceWorker';
 import MyStyleComponent from "./MyStyledComponent";
 import Appbars from "./Appbar";
 import Skill from "./skills";
+import Work from "./works";
 ReactDOM.render(
   <React.StrictMode>
       <Appbars />
     <MyStyleComponent />
     <Skill />
+    <Work />
   </React.StrictMode>,
   document.getElementById('root')
 );
