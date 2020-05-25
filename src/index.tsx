@@ -7,12 +7,16 @@ import MyStyleComponent from "./MyStyledComponent";
 import Appbars from "./Appbar";
 import Skill from "./skills";
 import Work from "./works";
+import {BrowserRouter as Router,Route} from "react-router-dom";
+
 ReactDOM.render(
   <React.StrictMode>
+      <Router>
       <Appbars />
-    <MyStyleComponent />
-    <Skill />
-    <Work />
+    <Route exact path='/about' component={MyStyleComponent} />
+    <Route path='/skill' component={Skill} />
+    <Route path='/work' component={Work} />
+      </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
