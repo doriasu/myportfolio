@@ -3,6 +3,7 @@ import {makeStyles,createStyles,Theme} from "@material-ui/core/styles";
 import Icon from './shakura.jpg'
 import {Button, Grid, Card, CardActionArea, CardMedia, CardContent, Typography} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
+import ButtonBase from "@material-ui/core/ButtonBase";
 
 //styleを定義
 const useStyles=makeStyles((theme:Theme)=>
@@ -38,7 +39,7 @@ const useStyles=makeStyles((theme:Theme)=>
 //コンポーネントの定義
 function Work(){
     const classes=useStyles();
-    return(
+    return (
         <div className={classes.root}>
             <h2 className={classes.title}>
                 Works
@@ -46,6 +47,9 @@ function Work(){
             <Grid container className={classes.grid}>
                 <Grid item xs={5}>
                     <Card className={classes.work_button}>
+                        <ButtonBase
+                            onClick={event => {window.location.href="https://doradorasuki.hatenablog.com/entry/2019/09/16/235140"}}
+                        >
                         <CardActionArea>
                             <CardMedia
                                 className={classes.media}
@@ -60,11 +64,13 @@ function Work(){
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
+                        </ButtonBase>
                     </Card>
                 </Grid>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={5}>
                     <Card className={classes.work_button}>
+                        <ButtonBase onClick={event => {window.location.href="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132"}}>
                         <CardActionArea>
                             <CardMedia
                                 className={classes.media}
@@ -79,10 +85,12 @@ function Work(){
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
+                        </ButtonBase>
                     </Card>
                 </Grid>
                 <Grid item xs={5}>
                     <Card className={classes.work_button}>
+                        <ButtonBase onClick={event => {window.location.href="https://github.com/doriasu/myportfolio"}}>
                         <CardActionArea>
                             <CardMedia
                                 className={classes.media}
@@ -97,11 +105,13 @@ function Work(){
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
+                        </ButtonBase>
                     </Card>
                 </Grid>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={5}>
                     <Card className={classes.work_button}>
+                        <ButtonBase onClick={event => {window.location.href="https://github.com/doriasu/FixstarsInternship"}}>
                         <CardActionArea>
                             <CardMedia
                                 className={classes.media}
@@ -116,14 +126,14 @@ function Work(){
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
+                        </ButtonBase>
                     </Card>
                 </Grid>
             </Grid>
 
 
-
-
         </div>
     );
+
 }
 export default Work;
