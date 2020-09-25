@@ -1,7 +1,7 @@
 import * as React from "react";
 import {makeStyles,createStyles,Theme} from "@material-ui/core/styles";
 import Icon from './shakura.jpg'
-import {Grid} from "@material-ui/core";
+import {Grid, Typography} from "@material-ui/core";
 //styleを定義
 const useStyles=makeStyles((theme:Theme)=>
     createStyles({

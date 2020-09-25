@@ -14,8 +14,8 @@ ReactDOM.render(
       <Router>
       <Appbars />
     <Route exact path='/about' component={MyStyleComponent} />
-    <Route path='/skill' component={Skill} />
-    <Route path='/work' component={Work} />
+    <Route path='/skills' component={Skill} />
+    <Route path='/works' component={Work} />
       </Router>
   </React.StrictMode>,
   document.getElementById('root')

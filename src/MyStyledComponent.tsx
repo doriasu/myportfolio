@@ -2,6 +2,8 @@ import * as React from "react";
 import {makeStyles,createStyles,Theme} from "@material-ui/core/styles";
 import Icon from './shakura.jpg'
 import {Grid} from "@material-ui/core";
+import {useEffect, useState} from "react";
+import axios from "axios"
 //styleを定義
 const useStyles=makeStyles((theme:Theme)=>
     createStyles({
@@ -39,6 +41,16 @@ type Props={
 //コンポーネントの定義
 function MyStyleComponent({title}:Props){
     const classes=useStyles();
+    const [hatena,setHatena]=useState({url:[],title:[]});
+    useEffect(()=>{
+        const fetchData=async()=> {
+            console.log("hatena取得開始");
+            const result = await axios.get("https://niconico-vocaloid-ranking.herokuapp.com/ranking_api/?hatena");
+            setHatena({url:result.data.url,title:result.data.title});
+
+        };
+        fetchData();
+    },[]);
     return(
         <div className={classes.root}>
             <h2 className={classes.title}>
@@ -58,6 +70,14 @@ function MyStyleComponent({title}:Props){
                     </ul>
                 </Grid>
             </Grid>
+            <h2 className={classes.title}>
+                article
+            </h2>
+            {hatena.url}
+            {hatena.title}
+
+
+
 
         </div>
     );

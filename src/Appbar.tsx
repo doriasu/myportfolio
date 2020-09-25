@@ -45,9 +45,9 @@ function Appbars() {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Button color="inherit" >about</Button>
-                    <Button color="inherit">skills</Button>
-                    <Button color="inherit">Works</Button>
+                    <Button color="inherit" onClick={()=>{window.location.href="/about"}}>about</Button>
+                    <Button color="inherit" onClick={()=>{window.location.href="/skills"}}>skills</Button>
+                    <Button color="inherit" onClick={()=>{window.location.href="/works"}}>Works</Button>
                     <Button color="inherit">Links</Button>
 
                 </Toolbar>
