@@ -1,9 +1,10 @@
 import * as React from "react";
 import {makeStyles,createStyles,Theme} from "@material-ui/core/styles";
 import Icon from './shakura.jpg'
-import {Grid} from "@material-ui/core";
+import {Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from "@material-ui/core";
 import {useEffect, useState} from "react";
 import axios from "axios"
+import ButtonBase from "@material-ui/core/ButtonBase";
 //styleを定義
 const useStyles=makeStyles((theme:Theme)=>
     createStyles({
@@ -29,7 +30,10 @@ const useStyles=makeStyles((theme:Theme)=>
             height:"100%",
             objectFit:"scale-down",
 
-        }
+        },
+        work_button:{
+            textTransform:'none',
+        },
     })
 );
 
@@ -51,6 +55,24 @@ function MyStyleComponent({title}:Props){
         };
         fetchData();
     },[]);
+    const rend=()=>{
+        const item=[];
+        for(let i=0;i<hatena.url.length;i++){
+            item.push(<Card className={classes.work_button}>
+                <ButtonBase onClick={event => {window.location.href=hatena.url[i]}}>
+                    <CardActionArea>
+
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="h2">
+                                {hatena.title[i]}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </ButtonBase>
+            </Card>);
+        }
+        return item;
+    }
     return(
         <div className={classes.root}>
             <h2 className={classes.title}>
@@ -73,8 +95,9 @@ function MyStyleComponent({title}:Props){
             <h2 className={classes.title}>
                 article
             </h2>
-            {hatena.url}
-            {hatena.title}
+            {rend()}
+
+
 
 
 
