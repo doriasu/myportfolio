@@ -43,7 +43,7 @@ function Appbars() {
                         color="inherit"
                         aria-label="menu"
                     >
-                        <MenuIcon />
+                        
                     </IconButton>
                     <Button color="inherit" onClick={()=>{window.location.href="/about"}}>about</Button>
                     <Button color="inherit" onClick={()=>{window.location.href="/skills"}}>skills</Button>

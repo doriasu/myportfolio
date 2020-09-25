@@ -33,6 +33,7 @@ const useStyles=makeStyles((theme:Theme)=>
         },
         work_button:{
             textTransform:'none',
+            justifyContent:"center",
         },
     })
 );
@@ -61,9 +62,8 @@ function MyStyleComponent({title}:Props){
             item.push(<Card className={classes.work_button}>
                 <ButtonBase onClick={event => {window.location.href=hatena.url[i]}}>
                     <CardActionArea>
-
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
+                            <Typography gutterBottom variant="h5" component="h2" >
                                 {hatena.title[i]}
                             </Typography>
                         </CardContent>
