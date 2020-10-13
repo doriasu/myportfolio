@@ -39,7 +39,7 @@ function Skill(){
     return(
         <div className={classes.root}>
             <h2 className={classes.title}>
-                Skills
+                Skills(about languages)
             </h2>
             <Grid container className={classes.ul}>
                 <Grid item xs={3}>

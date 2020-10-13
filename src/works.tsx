@@ -53,7 +53,7 @@ function Work(){
                         <CardActionArea>
                             <CardMedia
                                 className={classes.media}
-                                image={Icon}
+                                image={`${process.env.PUBLIC_URL}/work_pic/chuni.png`}
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
@@ -73,8 +73,9 @@ function Work(){
                         <ButtonBase onClick={event => {window.location.href="https://doradorasuki.hatenablog.com/entry/2019/12/16/000132"}}>
                         <CardActionArea>
                             <CardMedia
+                                component="iframe"
                                 className={classes.media}
-                                image={Icon}
+                                image={`${process.env.PUBLIC_URL}/work_pic/miku.mp4`}
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
@@ -94,14 +95,14 @@ function Work(){
                         <CardActionArea>
                             <CardMedia
                                 className={classes.media}
-                                image={Icon}
+                                image={`${process.env.PUBLIC_URL}/work_pic/noimage.png`}
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
                                     このサイトの作成
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    react,typescriptの練習がてらこのサイトを制作しました。material UIを採用しています。
+                                    react,typescriptの練習がてらこのサイトを制作しました。material UIを採用していて、netlifyにてホスティングしています。
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -115,14 +116,14 @@ function Work(){
                         <CardActionArea>
                             <CardMedia
                                 className={classes.media}
-                                image={Icon}
+                                image={`${process.env.PUBLIC_URL}/work_pic/noimage.png`}
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
                                     QNXを用いたカメラドライバの作成
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    FixstartInternshipにてQNXという組み込み向けOS向けのカメラドライバをC言語を用いて作成しました。
+                                    FixstartInternshipにてQNXという組み込みOS向けのカメラドライバをC言語を用いて作成しました。beaglebone上で動作します。
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
