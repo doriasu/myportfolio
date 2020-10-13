@@ -102,7 +102,7 @@ function Work(){
                                     このサイトの作成
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    react,typescriptの練習がてらこのサイトを制作しました。material UIを採用していて、netlifyにてホスティングしています。
+                                    react,typescriptの練習がてらこのサイトを制作しました。material UIを採用していて、netlifyにてホスティングしています。ブログ記事は別途Djangoでapiサーバを立てて自動取得しています。
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
