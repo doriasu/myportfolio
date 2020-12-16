@@ -130,6 +130,30 @@ function Work(){
                         </ButtonBase>
                     </Card>
                 </Grid>
+                <Grid item xs={5}>
+                    <Card className={classes.work_button}>
+                        <ButtonBase onClick={event => {window.location.href="https://jointsound.netlify.app/"}}>
+                            <CardActionArea>
+                                <CardMedia
+                                    className={classes.media}
+                                    image={`${process.env.PUBLIC_URL}/work_pic/jointsound.png`}
+                                />
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="h2">
+                                        JointSound(共同編集音楽アプリ)の作成
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p">
+                                        JPHacks2020にて334JST(B_2021)として出場しfinalistに選ばれました。<br/>RoomIDを一致させれば声の切り貼りや音源追加等により誰でも簡単に音楽をリアルタイム共同編集できます。<br/>主にフロント部分を友人と共同で作成しました(Vue.js)
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </ButtonBase>
+                    </Card>
+                </Grid>
+                <Grid item xs={2}></Grid>
+                <Grid item xs={5}>
+
+                </Grid>
             </Grid>
 
 

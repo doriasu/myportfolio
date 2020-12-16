@@ -135,6 +135,7 @@ function Skill(){
                     </Card>
                 </Grid>
 
+
             </Grid>
             <Grid container className={classes.ul}>
                 <Grid item xs={3}>
