@@ -5,6 +5,7 @@ import {Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from "@m
 import {useEffect, useState} from "react";
 import axios from "axios"
 import ButtonBase from "@material-ui/core/ButtonBase";
+import "./App.css"
 //styleを定義
 const useStyles=makeStyles((theme:Theme)=>
     createStyles({
@@ -95,7 +96,7 @@ function MyStyleComponent({title}:Props){
             <h2 className={classes.title}>
                 article
             </h2>
-            {rend()}
+            {hatena.url.length==0?<div className="loader">Loading...</div>:rend()}
 
 
 
